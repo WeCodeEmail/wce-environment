@@ -1,0 +1,9 @@
+nodejs/*
+!nodejs/wce
+!nodejs/wce.cmd
+!nodejs/wce.ps1
+
+!nodejs/node_modules/
+nodejs/node_modules/*
+!nodejs/node_modules/wecodeemail
+nodejs/node_modules/wecodeemail/node_modules/

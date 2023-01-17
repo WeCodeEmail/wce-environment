@@ -1,0 +1,121 @@
+// Typography
+body {
+	background: $body-background-color;
+	color: $body-text-color;
+	font: $body-text-weight #{$body-font-size}/#{$body-line-height} $body-font-family;
+	min-width: $body-min-width;
+
+	@extend %body-additional-styles;
+}
+
+p, ul, ol, dl {
+	margin: $paragraph-margins;
+
+	@extend %paragraph-additional-styles;
+}
+
+a {
+	@include link-text-decoration($link-text-decoration);
+
+	color: $link-color;
+
+	@extend %link-additional-styles;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $headings-font-family;
+	font-weight: $headings-font-weight;
+	margin: 0 0 0.5em;
+	color: $headings-color;
+
+	@extend %headings-additional-styles;
+}
+
+h1 {
+	font-size: $h1-fs-phone;
+
+	@include media ('>=phone') {
+		font-size: $h1-fs-tablet;
+	}
+
+	@include media ('>=desktop') {
+		font-size: $h1-fs-desktop;
+	}
+
+	@extend %h1-additional-styles;
+}
+
+h2 {
+	font-size: $h2-fs-phone;
+
+	@include media ('>=phone') {
+		font-size: $h2-fs-tablet;
+	}
+
+	@include media ('>=desktop') {
+		font-size: $h2-fs-desktop;
+	}
+
+	@extend %h2-additional-styles;
+}
+
+h3 {
+	font-size: $h3-fs-phone;
+
+	@include media ('>=phone') {
+		font-size: $h3-fs-tablet;
+	}
+
+	@include media ('>=desktop') {
+		font-size: $h3-fs-desktop;
+	}
+
+	@extend %h3-additional-styles;
+}
+
+h4 {
+	font-size: $h4-fs-phone;
+
+	@include media ('>=phone') {
+		font-size: $h4-fs-tablet;
+	}
+
+	@include media ('>=desktop') {
+		font-size: $h4-fs-desktop;
+	}
+
+	@extend %h4-additional-styles;
+}
+
+h5 {
+	font-size: $h5-fs-phone;
+
+	@include media ('>=phone') {
+		font-size: $h5-fs-tablet;
+	}
+
+	@include media ('>=desktop') {
+		font-size: $h5-fs-desktop;
+	}
+
+	@extend %h5-additional-styles;
+}
+
+h6 {
+	font-size: $h6-fs-phone;
+
+	@include media ('>=phone') {
+		font-size: $h6-fs-tablet;
+	}
+
+	@include media ('>=desktop') {
+		font-size: $h6-fs-desktop;
+	}
+
+	@extend %h6-additional-styles;
+}
