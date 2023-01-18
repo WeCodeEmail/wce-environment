@@ -1,4 +1,18 @@
 //elements
+a {
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+sup,
+sub {
+	font-size: 50%;
+}
+
 .container {
 	max-width: 1200px;
 	padding: 0 20px;
@@ -15,3 +29,7 @@
 	text-align: center;
 }
 
+.cta {
+	display: inline-block;
+	text-decoration: none;
+}
