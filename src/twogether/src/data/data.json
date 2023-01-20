@@ -1,0 +1,7 @@
+{
+  "pageTitle": "title",
+  "layout": "layouts/public.twig",
+  "stylesheet_page_01": "css/page-01.min.css",
+  "stylesheet_page_02": "css/page-02.min.css",
+  "buttons":{}
+}
