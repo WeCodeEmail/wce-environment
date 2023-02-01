@@ -1,0 +1,4 @@
+include: http://platform.pages.twogether.io/cicd/templates/gulp.gitlab-ci.yml
+
+build:
+  image: node:14-slim

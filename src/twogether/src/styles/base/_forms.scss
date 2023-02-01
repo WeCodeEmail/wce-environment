@@ -1,0 +1,219 @@
+// forms
+form,
+fieldset {
+	margin: 0;
+	padding: 0;
+	border-style: none;
+}
+
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='search'],
+input[type='password'],
+//input[type='url'],
+// input[type='date'],
+textarea {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	box-sizing: border-box;
+	border: 1px solid $form-element-border-color;
+	padding: $form-element-padding;
+
+	// &:hover {
+
+	// }
+
+	&:focus {
+		border-color: $form-element-focus-border-color;
+	}
+
+	@include placeholder {
+		// color: $placeholder-color;
+	}
+}
+
+select {
+	-webkit-border-radius: 0;
+}
+
+textarea {
+	resize: vertical;
+	vertical-align: top;
+}
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='file'],
+input[type='submit'] {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	cursor: pointer;
+}
+
+.form {
+
+	label.error {
+		display: none !important;
+	}
+
+	.LV_validation_message {
+		display: block;
+		font-size: 12px;
+		line-height: 1.33;
+
+		&.LV_invalid {
+			color: $red;
+		}
+
+		&.LV_valid {
+			color: $red500;
+		}
+	}
+
+	.form-field {
+		margin-bottom: 20px;
+
+		@include media ('>=tablet') {
+			margin-bottom: 25px;
+		}
+
+		& ~ .LV_validation_message {
+			margin: -22px 0 12px;
+		}
+	}
+
+	.columns {
+		display: flex;
+
+		& > label {
+			padding-top: 3px;
+			margin-top: 0;
+
+			&:not(:first-child) {
+				margin-left: 40px;
+			}
+		}
+	}
+
+	.select-wrapper,
+	.input-wrapper {
+		position: relative;
+
+		&:after {
+			@include size(15px);
+
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 17px;
+			border: solid $black;
+			border-width: 0 2px 2px 0;
+			transform: translateY(-75%) rotate(45deg);
+		}
+
+		select {
+			padding: 9px 45px 10px 15px;
+		}
+
+		& ~ .LV_validation_message {
+			margin: 3px 0 -15px;
+		}
+	}
+
+	.row {
+
+		input[type='text'],
+		input[type='tel'],
+		input[type='email'],
+		input[type='search'],
+		input[type='password'],
+		//input[type='url'],
+		// input[type='date'],
+		textarea {
+
+			&:focus {
+				border-color: $black;
+				color: $black;
+			}
+
+			&.error {
+				border-color: $red;
+				color: $red;
+
+				&:focus {
+					border-color: $black;
+					color: $black;
+				}
+			}
+
+			&.success {
+				border-color: green;
+				color: green;
+
+				&:focus {
+					border-color: $black;
+					color: $black;
+				}
+			}
+		}
+	}
+
+	.label-block {
+		display: block;
+		position: relative;
+		padding-left: 35px;
+		font-size: 12px;
+		line-height: 1.5;
+		font-weight: 400;
+		color: $gray500;
+		cursor: pointer;
+		user-select: none;
+
+		& input:checked ~ .checkmark, & input:checked ~ .radio {
+			border-color: $red500;
+			background: $red500;
+		}
+
+		& input:checked ~ .checkmark:after, & input:checked ~ .radio:after {
+			display: block;
+		}
+
+		& ~ .LV_validation_message {
+			display: block!important;
+		}
+
+		[type="checkbox"],
+		[type="radio"] {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			height: 0;
+			width: 0;
+		}
+
+		.checkmark {
+			@include size(24px);
+
+			position: absolute;
+			top: 2px;
+			left: 0;
+			border: 1px solid $gray300;
+			border-radius: 4px;
+
+			&:after {
+				content: '';
+				position: absolute;
+				display: none;
+				left: 6px;
+				top: 2px;
+				width: 9px;
+				height: 15px;
+				border: solid $white;
+				border-width: 0 3px 3px 0;
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
